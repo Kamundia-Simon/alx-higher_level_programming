@@ -7,4 +7,3 @@ for x in range(10):
             else:
                 print("{:d}{:d}".format(x, y))
 print()
-
