@@ -43,3 +43,13 @@ case 10: NaN numbers
 Traceback (most recent call last):
 ValueError: cannot convert float NaN to integer
 
+Case 11: Adding an integer and a tuple.
+>>> add_integer(2, ())
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+Case 12: Adding an integer and a set.
+>>> add_integer(2, {})
+Traceback (most recent call last):
+		...
+TypeError: b must be an integer
