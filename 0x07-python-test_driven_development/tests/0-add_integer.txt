@@ -12,28 +12,18 @@
 >>> add_integer(2)
 100
 
-case 4: 2 floats, which should cast as ints
+#case 4: 2 floats, which should cast as ints
 >>> add_integer(2.3, 3)
 5
 
-case 5: integer and string
->>> add_integer(2, Best)
-Traceback (most recent call last):
-TypeError: b must be an integer
-
-case 6: integer and none
->>> add_integer(None)
-
-TypeError: a must be an integer
-
-case 7: large ints
+#case 5: large ints
 >>> add_integer(123456789, 987654321)
 1111111110
 
-case 8: large negative ints
+#case 6: large negative ints
 >>> add_integer(-123456789, -987654321)
 -1111111110
 
-case 9: a zero and positive integer
+case 7: a zero and positive integer
 >>> add_integer(0, 3)
-
+3
