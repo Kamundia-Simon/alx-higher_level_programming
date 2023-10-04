@@ -2,6 +2,7 @@
 
 """Addition function"""
 
+
 def add_integer(a, b=98):
     """addition of integers"""
 
