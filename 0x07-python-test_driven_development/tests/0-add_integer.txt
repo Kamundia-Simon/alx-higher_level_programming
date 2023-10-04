@@ -27,3 +27,15 @@
 case 7: a zero and positive integer
 >>> add_integer(0, 3)
 3
+
+case 8: integer and string
+>>> add_integer(2, Best)
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+case 9: integer and none
+>>> add_integer(None)
+ Traceback (most recent call last):
+TypeError: a must be an integer
+
+
