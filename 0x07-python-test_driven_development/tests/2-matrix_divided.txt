@@ -5,7 +5,7 @@ case 1: dividing by 2
 >>> matrix = [
 ...     [2, 4, 6],
 ...     [8, 10, 12]
-...]
+... ]
 print(matrix_divided(matrix, 2))
     [[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
 
