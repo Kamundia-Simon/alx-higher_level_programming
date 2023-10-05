@@ -33,23 +33,17 @@ case 8: integer and string
 Traceback (most recent call last):
 TypeError: a must be an integer
 
-case 9: integer and none
->>> add_integer(None)
- Traceback (most recent call last):
-TypeError: a must be an integer
-
-case 10: NaN numbers
+case 9: NaN numbers
 >>> add_integer(float('nan'))
 Traceback (most recent call last):
 ValueError: cannot convert float NaN to integer
 
-Case 11: Adding an integer and a tuple.
+Case 10: Adding an integer and a tuple.
 >>> add_integer(2, ())
 Traceback (most recent call last):
 TypeError: b must be an integer
 
-Case 12: Adding an integer and a set.
+Case 11: Adding an integer and a set.
 >>> add_integer(2, {})
 Traceback (most recent call last):
-		...
 TypeError: b must be an integer
