@@ -4,7 +4,14 @@
 
 
 def print_square(size):
-    """printing a square"""
+    """printing a square
+
+    Args:
+        size (int): The height/width of the square.
+    Raises:
+        TypeError: If size is not an integer.
+        ValueError: If size is < 0
+    """
 
     if not isinstance(size, int):
         raise TypeError("size must be an integer")
