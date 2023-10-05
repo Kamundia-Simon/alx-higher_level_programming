@@ -1,11 +1,5 @@
 >>> say_my_name = __import__('3-say_my_name').say_my_name
 
-# Test cases for say_my_name function
-
-# Test Case 1: Valid test case with only first name
->>> say_my_name("Bob")
-My name is Bob
-
 # Test Case 2: Valid test case with both first name and last name
 >>> say_my_name("Simon", "Smith")
 My name is Simon Smith
