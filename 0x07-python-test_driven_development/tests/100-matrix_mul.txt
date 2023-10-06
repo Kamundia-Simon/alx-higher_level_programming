@@ -31,7 +31,7 @@
 ... ]
 >>> print(matrix_mul(m_a, m_b))
 Traceback (most recent call last):
-TypeError: m_a must be a list or m_b must be a list
+TypeError: m_a must be a list
 
 # Test  4: Invalid input - m_b is not a list
 >>> m_a = [
@@ -41,7 +41,7 @@ TypeError: m_a must be a list or m_b must be a list
 >>> m_b = 56
 >>> print(matrix_mul(m_a, m_b))
 Traceback (most recent call last):
-TypeError: m_a must be a list or m_b must be a list
+TypeError: m_b must be a list
 
 # Test  5: Invalid input - m_a is an empty list
 >>> m_a = []
@@ -72,7 +72,7 @@ ValueError: m_b can't be empty
 ... ]
 >>> print(matrix_mul(m_a, m_b))
 Traceback (most recent call last):
-TypeError: m_a must be a list of lists or m_b must be a list of lists
+TypeError: m_a must be a list of lists
 
 # Test 8: Invalid input - m_b is not a list of lists
 >>> m_a = [
@@ -82,7 +82,7 @@ TypeError: m_a must be a list of lists or m_b must be a list of lists
 >>> m_b = [5, 6, 7]
 >>> print(matrix_mul(m_a, m_b))
 Traceback (most recent call last):
-TypeError: m_a must be a list of lists or m_b must be a list of lists
+TypeError: m_b must be a list of lists
 
 # Test 9: Invalid input - Element in m_a is not an integer or float
 >>> m_a = [
@@ -95,17 +95,18 @@ TypeError: m_a must be a list of lists or m_b must be a list of lists
 ... ]
 >>> print(matrix_mul(m_a, m_b))
 Traceback (most recent call last):
-TypeError: m_a should contain only integers or floats or m_b should contain only integers or floats
+TypeError: m_a should contain only integers or floats
 
-# Test 10: Invalid input - Incompatible matrix dimensions
+# Test Case 11: Invalid input - Matrices cannot be multiplied
 >>> m_a = [
-...     [1, 2, 3],
-...     [4, 5, 6]
-... ]
->>> m_b = [
 ...     [1, 2],
 ...     [3, 4]
 ... ]
+>>> m_b = [
+...     [1, 2, 3],
+...     [4, 5, 6],
+...     [4, 5]
+... ]
 >>> print(matrix_mul(m_a, m_b))
 Traceback (most recent call last):
-TypeError: each row of m_a must should be of the same size
+TypeError: each row of m_b must should be of the same size
