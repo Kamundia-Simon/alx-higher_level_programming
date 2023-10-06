@@ -1,4 +1,4 @@
-# Test Case 1: Valid input - Multiply two matrices
+# Case 1: Valid input - Multiply 2 matrices
 >>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
 >>> m_a = [
 ...     [1, 2],
@@ -9,7 +9,7 @@
 [[ 7 10]
  [15 22]]
 
-# Test Case 2: Valid input - Multiply two matrices of different sizes
+# Case 2: Valid input different sizes
 >>> m_a = [
 ...     [1, 2],
 ... ]
@@ -20,7 +20,7 @@
 >>> print(lazy_matrix_mul(m_a, m_b))
 [[13 16]]
 
-# Test Case 3: Invalid input - m_a is not a list
+# Case 3: Invalid input
 >>> m_a = 123
 >>> m_b = [
 ...     [1, 2],
@@ -31,7 +31,7 @@ Traceback (most recent call last):
     ...
 TypeError: Object arrays are not currently supported
 
-# Test Case 4: Invalid input - m_b is not a list
+# Case 4: Invalid input
 >>> m_a = [
 ...     [1, 2],
 ...     [3, 4],
@@ -42,7 +42,7 @@ Traceback (most recent call last):
     ...
 TypeError: Object arrays are not currently supported
 
-# Test Case 5: Invalid input - m_a is an empty list
+# Test Case 5: Invalid input -empty list
 >>> m_a = []
 >>> m_b = [
 ...     [1, 2],
@@ -51,7 +51,7 @@ TypeError: Object arrays are not currently supported
 >>> print(lazy_matrix_mul(m_a, m_b))
 ValueError: shapes (0,) and (2,2) not aligned: 0 (dim 0) != 2 (dim 0)
 
-# Test Case 6: Invalid input - m_b is an empty list
+# Case 6: Invalid input - an empty list
 >>> m_a = [
 ...     [1, 2],
 ...     [3, 4],
@@ -60,7 +60,7 @@ ValueError: shapes (0,) and (2,2) not aligned: 0 (dim 0) != 2 (dim 0)
 >>> print(lazy_matrix_mul(m_a, m_b))
 ValueError: shapes (2,2) and (0,) not aligned: 2 (dim 0) != 0 (dim 0)
 
-# Test Case 7: Invalid input - m_a contains non-integer/float elements
+# Case 7: m_a contains non-integer/float
 >>> m_a = [
 ...     [1, 2],
 ...     [3, 'x'],
@@ -72,7 +72,7 @@ ValueError: shapes (2,2) and (0,) not aligned: 2 (dim 0) != 0 (dim 0)
 >>> print(lazy_matrix_mul(m_a, m_b))
 TypeError: Object arrays are not currently supported
 
-# Test Case 8: Invalid input - m_b contains non-integer/float elements
+# Case 8:  m_b contains non-integer
 >>> m_a = [
 ...     [1, 2],
 ...     [3, 4],
@@ -84,7 +84,7 @@ TypeError: Object arrays are not currently supported
 >>> print(lazy_matrix_mul(m_a, m_b))
 TypeError: Object arrays are not currently supported
 
-# Test Case 9: Invalid input - Incompatible matrix dimensions
+# Case 9: Invalid input - Incompatible matrix
 >>> m_a = [
 ...     [1, 2, 3],
 ...     [4, 5, 6],
@@ -96,7 +96,7 @@ TypeError: Object arrays are not currently supported
 >>> print(lazy_matrix_mul(m_a, m_b))
 ValueError: shapes (2,3) and (2,2) not aligned: 3 (dim 1) != 2 (dim 0)
 
-# Test Case 10: Invalid input - Incompatible matrix dimensions (m_b)
+# Case 10: Invalid input - Incompatible matrix
 >>> m_a = [
 ...     [1, 2],
 ...     [3, 4],
