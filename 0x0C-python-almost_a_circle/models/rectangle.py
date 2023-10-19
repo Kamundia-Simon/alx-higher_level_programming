@@ -83,3 +83,76 @@ class Rectangle(Base):
     def area(self):
         """return area of rectangle"""
         return self.width * self.height
+
+    def display(self):
+        """print the rectangle using the # character"""
+        if self.width == 0 or self.height == 0:
+            print("")
+            return
+        [print("") for y in range(self.y)]
+        for i in range(self.height):
+            [print(" ", end="") for x in range(self.x)]
+            [print("#", end="") for w in range(self.width)]
+            print("")
+
+    def update(self, *args, **kwargs):
+        """Update the Rectangle.
+
+        Args:
+            *args: new attribute values.
+                - 1st argument reps id attribute
+                - 2nd argument reps width attribute
+                - 3rd argument reps height attribute
+                - 4th argument reps x attribute
+                - 5th argument reps y attribute
+            **kwargs (dict): value pairs of attributes
+        """
+        if args and len(args) != 0:
+            i = 0
+            for a in args:
+                if i == 0:
+                    if arg is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = a
+                elif i == 1:
+                    self.width = a
+                elif i == 2:
+                    self.height = a
+                elif i == 3:
+                    self.x = a
+                elif i == 4:
+                    self.y = a
+                i += 1
+
+        elif kwargs and len(kwargs) != 0:
+            for k, j in kwargs.items():
+                if k == "id":
+                    if j is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = j
+                elif k == "width":
+                    self.width = j
+                elif k == "height":
+                    self.height = j
+                elif k == "x":
+                    self.x = j
+                elif k == "y":
+                    self.y = j
+
+    def to_dictionary(self):
+        """return the dictionary representation of a rectangle"""
+        return {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y
+        }
+
+    def __str__(self):
+        """return the print() and str() representation of the rectangle."""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.x, self.y,
+                                                       self.width, self.height)
