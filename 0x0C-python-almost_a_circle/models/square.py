@@ -68,3 +68,17 @@ class Square(Rectangle):
                     self.x = j
                 elif k == "y":
                     self.y = j
+
+    def to_dictionary(self):
+        """return the dictionary reps of the square."""
+        return {
+            "id": self.id,
+            "size": self.width,
+            "x": self.x,
+            "y": self.y
+        }
+
+    def __str__(self):
+        """return the print() and str() rep of a square."""
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
+                                                 self.width)
