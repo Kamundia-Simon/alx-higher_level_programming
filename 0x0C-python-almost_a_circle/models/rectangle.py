@@ -111,7 +111,7 @@ class Rectangle(Base):
             i = 0
             for a in args:
                 if i == 0:
-                    if arg is None:
+                    if a is None:
                         self.__init__(self.width, self.height, self.x, self.y)
                     else:
                         self.id = a
