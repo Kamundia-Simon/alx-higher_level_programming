@@ -1,18 +1,17 @@
 #!/usr/bin/python3
 """
-inherits from SQLAlchemy base and links to the MySQL table cities
+Contains the class definition of a State
 """
 
-from sqlalchemy import Column, ForeignKey, Integer, String
+from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
 
-class City(Base):
-    # rep  a city for a MySQL database
+class State(Base):
+    # Rep a state for a MySQL database
 
-    __tablename__ = "cities"
+    __tablename__ = "states"
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
-    state_id = Column(Integer, ForeignKey("states.id"), nullable=False)
