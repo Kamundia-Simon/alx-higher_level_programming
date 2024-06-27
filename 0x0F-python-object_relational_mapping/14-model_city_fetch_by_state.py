@@ -15,6 +15,6 @@ if __name__ == "__main__":
     ses = Session()
 
     for city, state in ses.query(City, State) \
-                              .filter(City.state_id == State.id) \
-                              .order_by(City.id):
+            .filter(City.state_id == State.id) \
+            .order_by(City.id):
         print("{}: ({}) {}".format(state.name, city.id, city.name))
